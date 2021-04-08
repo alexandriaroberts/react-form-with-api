@@ -65,7 +65,7 @@ function Address({ formValues, setFormValues }) {
 
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)} className="search">
+      <form onSubmit={handleSubmit(onSubmit)} className="px-10">
         <p>Search Country....</p>
         <Select
           type="text"
@@ -74,13 +74,18 @@ function Address({ formValues, setFormValues }) {
           value={search.country}
           onChange={handleChange}
           name="Search"
-          {...register("text")}
+          ref={register}
           options={options}
           styles={customStyles}
         />
 
         <div>
-          <button type="Submit">Submit</button>
+          <button
+            type="Submit"
+            className="inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md focus:outline-none focus:ring-2 text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mt-10"
+          >
+            Submit
+          </button>
         </div>
       </form>
     </>

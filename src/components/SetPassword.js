@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 
-function ContactEmail({ setStep, formValues, setFormValues }) {
+export default function SetPassword({ setStep, formValues, setFormValues }) {
   const { register, handleSubmit } = useForm();
 
   function onSubmit(values) {
@@ -8,20 +8,26 @@ function ContactEmail({ setStep, formValues, setFormValues }) {
       ...formValues,
       ...values,
     });
-    setStep(2);
+    setStep(3);
   }
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div>
-          <label htmlFor="email" className="sr-only"></label>
+      <form onSubmit={handleSubmit(onSubmit)} className="px-10">
+        <div className="flex flex-col mb-4">
+          <label
+            htmlFor="name"
+            className="mb-2 uppercase font-bold text-lg text-grey-darkest"
+          ></label>
+
           <input
-            {...register("email", { required: true })}
-            name="email"
-            type="email"
-            placeholder="Email"
+            ref={register}
+            name="name"
+            type="text"
+            placeholder="Name"
+            className="border py-2 px-3 text-grey-darkest rounded-lg shadow-sm"
           />
         </div>
+
         <div>
           <button
             type="Submit"
@@ -34,5 +40,3 @@ function ContactEmail({ setStep, formValues, setFormValues }) {
     </>
   );
 }
-
-export default ContactEmail;
