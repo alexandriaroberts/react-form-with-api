@@ -22,11 +22,11 @@ export default function SetPassword({ setStep, formValues, setFormValues }) {
         <div className="flex flex-col mb-4">
           <label
             htmlFor="password"
-            className="mb-2 uppercase font-bold text-lg text-grey-darkest"
+            className="font-sans mb-2 uppercase font-bold text-lg text-grey-darkest"
           ></label>
 
           {errors.password && (
-            <p className="text-pink-400">{errors.password.message}</p>
+            <p className="text-pink-400 font-sans">{errors.password.message}</p>
           )}
 
           <input
@@ -40,13 +40,13 @@ export default function SetPassword({ setStep, formValues, setFormValues }) {
             name="password"
             type="password"
             placeholder="Password"
-            className="border py-2 px-3 text-grey-darkest rounded-lg shadow-sm"
+            className="font-sans border py-2 px-3 text-grey-darkest rounded-lg shadow-sm"
           />
         </div>
         <div className="flex flex-col mb-4">
           <label
             htmlFor="repeat password"
-            className="mb-2 uppercase font-bold text-lg text-grey-darkest"
+            className="font-sans mb-2 uppercase font-bold text-lg text-grey-darkest"
           ></label>
 
           {errors.password && (

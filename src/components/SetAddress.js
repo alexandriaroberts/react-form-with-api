@@ -73,7 +73,7 @@ function Address({ setStep, formValues, setFormValues }) {
         alt="Decoration"
       ></img>
       <form onSubmit={handleSubmit(onSubmit)} className="px-10">
-        <p className="py-2">Search Your Country....</p>
+        <p className="py-2 font-sans">Search Your Country....</p>
         <Select
           type="text"
           defaultValue={""}
@@ -84,13 +84,13 @@ function Address({ setStep, formValues, setFormValues }) {
           ref={register}
           options={options}
           styles={customStyles}
-          className="block appearance-none w-1/2 bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+          className="font-sans block appearance-none w-1/2 bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
         />
 
         <div>
           <button
             type="Submit"
-            className="inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md focus:outline-none focus:ring-2 text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mt-10"
+            className="font-sans inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md focus:outline-none focus:ring-2 text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mt-10"
           >
             Submit
           </button>

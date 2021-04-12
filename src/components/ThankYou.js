@@ -14,7 +14,7 @@ export default function ThankYou({ setStep, formValues, setFormValues }) {
   return (
     <>
       <div onSubmit={handleSubmit(onSubmit)}>
-        <p className="text-xl text-indigo-400">
+        <p className="text-xl text-indigo-400 font-sans">
           Thank you for your info, we will contact you soon!
         </p>
         <img

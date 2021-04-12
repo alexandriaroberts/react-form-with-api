@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="content-center h-screen w-screen bg-indigo-400 overflow-hidden">
       <div className="my-20 xl:mx-48 lg:mx-48 md:mx-13 sm:mx-5 content-center">
-        <h1 className="text-4xl font-bold text-left text-white py-20">
+        <h1 className="font-sans text-4xl font-medium text-left text-white py-20">
           Multi Step Form with API
         </h1>
         <div className="bg-white rounded px-5 py-20  content-center">
