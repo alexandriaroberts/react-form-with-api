@@ -1,8 +1,8 @@
-This is a practical example of using React hooks with rescountries.eu API, wanted to try Tailwind CSS, so have used Tailwind CSS for this project.\
+This is a practical example of using React hooks with rescountries.eu API, wanted to try Tailwind CSS, so have used Tailwind CSS for this project.
 
 The forms effect is done using React hook form and used React states to go from one compnent to another.
 
-In the project directory, install packages by\
+In the project directory, install packages by
 
 ### `npm install`
 
