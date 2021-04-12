@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import image2 from "../images/image2.svg";
 
 export default function SetPassword({ setStep, formValues, setFormValues }) {
   const { register, handleSubmit, errors } = useForm();
@@ -12,14 +13,21 @@ export default function SetPassword({ setStep, formValues, setFormValues }) {
   }
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)} className="px-10">
+      <img
+        src={image2}
+        className="absolute -top-5 right-0 z-0 md:opacity-90 sm:opacity-0"
+        alt="Decoration"
+      ></img>
+      <form onSubmit={handleSubmit(onSubmit)} className="px-10 z-50">
         <div className="flex flex-col mb-4">
           <label
             htmlFor="password"
             className="mb-2 uppercase font-bold text-lg text-grey-darkest"
           ></label>
 
-          {errors.password && <p>{errors.password.message}</p>}
+          {errors.password && (
+            <p className="text-pink-400">{errors.password.message}</p>
+          )}
 
           <input
             ref={register({
@@ -41,7 +49,9 @@ export default function SetPassword({ setStep, formValues, setFormValues }) {
             className="mb-2 uppercase font-bold text-lg text-grey-darkest"
           ></label>
 
-          {errors.password && <p>{errors.password.message}</p>}
+          {errors.password && (
+            <p className="text-pink-400">{errors.password.message}</p>
+          )}
 
           <input
             ref={register({

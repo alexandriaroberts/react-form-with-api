@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import Select from "react-select";
+import image3 from "../images/image3.svg";
 
-function Address({ formValues, setFormValues }) {
+function Address({ setStep, formValues, setFormValues }) {
   const [data, setData] = useState([]);
   const [search, setSearch] = useState({ country: undefined });
   const { register, handleSubmit } = useForm();
@@ -33,6 +34,7 @@ function Address({ formValues, setFormValues }) {
       ...values,
       ...search,
     });
+    setStep(4);
     console.log({ ...formValues, ...values, ...search });
   }
 
@@ -65,8 +67,13 @@ function Address({ formValues, setFormValues }) {
 
   return (
     <>
+      <img
+        src={image3}
+        className="absolute top-0 right-0 md:opacity-90 sm:opacity-0"
+        alt="Decoration"
+      ></img>
       <form onSubmit={handleSubmit(onSubmit)} className="px-10">
-        <p>Search Country....</p>
+        <p className="py-2">Search Your Country....</p>
         <Select
           type="text"
           defaultValue={""}
@@ -77,6 +84,7 @@ function Address({ formValues, setFormValues }) {
           ref={register}
           options={options}
           styles={customStyles}
+          className="block appearance-none w-1/2 bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
         />
 
         <div>

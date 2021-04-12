@@ -1,7 +1,8 @@
 import { useForm } from "react-hook-form";
+import image1 from "../images/image1.svg";
 
 export default function ContactEmail({ setStep, formValues, setFormValues }) {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, errors } = useForm();
 
   function onSubmit(values) {
     setFormValues({
@@ -12,14 +13,28 @@ export default function ContactEmail({ setStep, formValues, setFormValues }) {
   }
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)} className="px-10">
+      <img
+        src={image1}
+        className="absolute top-0 right-0 md:opacity-90 sm:opacity-0"
+        alt="Decoration"
+      ></img>
+      <form onSubmit={handleSubmit(onSubmit)} className="px-10 ">
         <div className="flex flex-col mb-4">
           <label
             htmlFor="name"
             className="mb-2 uppercase font-bold text-lg text-grey-darkest"
           ></label>
+
+          {errors.name && (
+            <p className="text-pink-400">{errors.name.message}</p>
+          )}
           <input
-            ref={register}
+            ref={register({
+              required: "You must specify your name",
+              minLength: {
+                message: "Your name should contain characters",
+              },
+            })}
             name="name"
             type="text"
             placeholder="Name"
@@ -32,8 +47,17 @@ export default function ContactEmail({ setStep, formValues, setFormValues }) {
             htmlFor="email"
             className="mb-2 uppercase font-bold text-lg text-grey-darkest"
           ></label>
+          {errors.email && (
+            <p className="text-pink-400">{errors.email.message}</p>
+          )}
+
           <input
-            ref={register}
+            ref={register({
+              required: "You must specify an email",
+              minLength: {
+                message: "Your email must contain @ , .com",
+              },
+            })}
             name="email"
             type="email"
             placeholder="Email"
