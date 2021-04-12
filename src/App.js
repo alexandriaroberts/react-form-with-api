@@ -9,7 +9,7 @@ function App() {
   const [formValues, setFormValues] = useState({});
   return (
     <div className="content-center h-screen w-screen bg-indigo-400 overflow-hidden">
-      <div className="my-20 xl:mx-48 lg:mx-48 md:mx-13 sm:mx-5 content-center">
+      <div className="my-20 xl:mx-48 lg:mx-48 md:mx-13 sm:mx-5 content-center animate-fade-in-down">
         <h1 className="font-sans text-4xl font-medium text-left text-white py-20">
           Multi Step Form with API
         </h1>
@@ -19,7 +19,6 @@ function App() {
               setStep={setStep}
               formValues={formValues}
               setFormValues={setFormValues}
-              className="p-20"
             />
           )}
 

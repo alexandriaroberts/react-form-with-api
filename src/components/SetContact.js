@@ -18,7 +18,10 @@ export default function ContactEmail({ setStep, formValues, setFormValues }) {
         className="absolute top-0 right-0 md:opacity-90 sm:opacity-0"
         alt="Decoration"
       ></img>
-      <form onSubmit={handleSubmit(onSubmit)} className="px-10 ">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="px-10 animate-fade-in-down "
+      >
         <div className="flex flex-col mb-4">
           <label
             htmlFor="name"

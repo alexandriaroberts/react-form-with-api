@@ -18,7 +18,10 @@ export default function SetPassword({ setStep, formValues, setFormValues }) {
         className="absolute -top-5 right-0 z-0 md:opacity-90 sm:opacity-0"
         alt="Decoration"
       ></img>
-      <form onSubmit={handleSubmit(onSubmit)} className="px-10 z-50">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="px-10 z-50 animate-fade-in-down"
+      >
         <div className="flex flex-col mb-4">
           <label
             htmlFor="password"

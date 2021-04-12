@@ -60,7 +60,7 @@ function Address({ setStep, formValues, setFormValues }) {
     placeholder: (base) => ({
       ...base,
       fontSize: "1em",
-      color: "#53e3a6",
+      color: "rgba(59, 130, 246, 0.5)",
       fontWeight: 200,
     }),
   };
@@ -72,7 +72,10 @@ function Address({ setStep, formValues, setFormValues }) {
         className="absolute top-0 right-0 md:opacity-90 sm:opacity-0"
         alt="Decoration"
       ></img>
-      <form onSubmit={handleSubmit(onSubmit)} className="px-10">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="px-10 animate-fade-in-down"
+      >
         <p className="py-2 font-sans">Search Your Country....</p>
         <Select
           type="text"
